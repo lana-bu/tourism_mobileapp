@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tourism_mobileapp/screens/location_detail/text_section.dart';
 
 class LocationDetail extends StatelessWidget {
   @override // @ symbol is an annotation, adding a label to our function that gives it some characteristic/functionality
@@ -8,25 +9,12 @@ class LocationDetail extends StatelessWidget {
         title: Text('Hello'),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start, // vertical axis since it's a column
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-              child: Text('hi'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text('hey'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('bonjour'),
-            ),
+            TextSection(Colors.red),
+            TextSection(Colors.green),
+            TextSection(Colors.blue),
           ],
         )
       );
